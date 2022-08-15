@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin-area </title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="./assets/css/adminStyles.css" />
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="">POSTS</a></li>
+                    <li><a href="">USERS</a></li>
+                </ul>
+            </nav>
+            <h1 class="band-name band-name-large">Admin is here..</h1>
+        </header>
+        <section class="content-section container">
+            <h2 class="section-header">ALL-POSTS</h2>
+            <div id="switch" value="">                
+                <% allPosts.forEach(async post => { %>
+                <div class="post-row" data-item-id="<%=post._id %>">
+                    <span class="post-title tour-arena"> <%=post.title %> </span>
+                    <button class="btn btn-danger btn-remove" type="button">REMOVE</button>
+                    <button type="button" class="btn-update tour-btn btn btn-primary">Update</button>                    
+                </div>
+                <% }) %>
+            </div>
+        </section>        
+    </body>
+</html>
